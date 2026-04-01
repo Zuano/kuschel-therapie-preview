@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kuschel-therapie.at — Bianca Dorner | Kuscheltherapie in OÖ</title>
+    <meta name="description" content="Kuscheltherapie von Bianca Dorner in St. Florian bei Linz. Achtsame Berührung für Körper und Geist. Erlebe Nähe, Geborgenheit und emotionale Wärme.">
+    <meta name="keywords" content="Kuscheltherapie, Berührungstherapie, Bianca Dorner, St. Florian, Linz, Oberösterreich, Wellness, Geborgenheit">
+    <meta property="og:title" content="kuschel-therapie.at — Bianca Dorner">
+    <meta property="og:description" content="Erlebe achtsame Berührung. Kuscheltherapie in St. Florian bei Linz.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kuschel-therapie.at">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=MonteCarlo&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: #1a1a1a;
+            background: #FAFDFB;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: #059669; text-decoration: none; transition: color 0.3s; }
+        a:hover { color: #10B981; }
+        ul { list-style: none; }
+
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --green: #059669;
+            --green-light: #10B981;
+            --green-dark: #064E3B;
+            --mint: #ECFDF5;
+            --mint-dark: #D1FAE5;
+            --beige: #f5ead3;
+            --white: #ffffff;
+            --text: #1a1a1a;
+            --text-light: #4a5568;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.12);
+            --radius: 12px;
+            --max-width: 1100px;
+        }
+
+        /* ===== UTILITIES ===== */
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+        .section { padding: 80px 0; }
+        .section-alt { background: var(--mint); }
+        .text-center { text-align: center; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3 { font-family: 'MonteCarlo', cursive; color: var(--green-dark); font-weight: 400; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px; }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 12px; }
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+        .script { font-family: 'Great Vibes', cursive; }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: var(--green);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            background: var(--green-light);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(5,150,105,0.3);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--green);
+            border: 2px solid var(--green);
+        }
+        .btn-outline:hover {
+            background: var(--green);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        .btn-white {
+            background: var(--white);
+            color: var(--green-dark);
+        }
+        .btn-white:hover {
+            background: var(--mint);
+            color: var(--green-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        /* ===== HEADER / NAV ===== */
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(5,150,105,0.1);
+            transition: box-shadow 0.3s;
+        }
+        header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+        .nav-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-logo img { width: 40px; height: 40px; border-radius: 50%; }
+        .nav-logo span {
+            font-family: 'MonteCarlo', cursive;
+            font-size: 1.4rem;
+            color: var(--green);
+        }
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text);
+            position: relative;
+            padding: 4px 0;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: var(--green);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover { color: var(--green); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta { margin-left: 8px; }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--green-dark);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* ===== MOBILE NAV ===== */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(16px);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+        }
+        .mobile-nav.open { display: flex; }
+        .mobile-nav a {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+        }
+        .mobile-nav a:hover { color: var(--green); }
+        .mobile-close {
+            position: absolute;
+            top: 20px; right: 24px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--green-dark);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            opacity: 0.7;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(
+                to bottom,
+                rgba(6, 78, 59, 0.3) 0%,
+                rgba(0, 0, 0, 0.15) 40%,
+                rgba(0, 0, 0, 0.25) 60%,
+                rgba(6, 78, 59, 0.65) 100%
+            );
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 120px 24px 80px;
+        }
+        .hero-tagline {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: var(--white);
+            line-height: 1.2;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 30px rgba(0,0,0,0.5), 0 1px 8px rgba(0,0,0,0.3);
+        }
+        .hero-name {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            font-weight: 600;
+            color: var(--beige);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .hero-desc {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            color: rgba(255,255,255,0.95);
+            max-width: 560px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            text-shadow: 0 1px 12px rgba(0,0,0,0.4);
+        }
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* ===== INTRO / ABOUT TEASER ===== */
+        .intro {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .intro-img {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        .intro-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 3/4;
+        }
+        .intro-text h2 { margin-bottom: 20px; }
+        .intro-text p { color: var(--text-light); margin-bottom: 16px; font-size: 1.02rem; }
+        .intro-text .quote {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.5rem;
+            color: var(--green);
+            margin: 24px 0;
+            line-height: 1.5;
+        }
+
+        /* ===== BENEFITS ===== */
+        .benefits { padding: 100px 0; background: var(--mint); }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .benefit-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .benefit-card h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            margin-bottom: 8px;
+        }
+        .benefit-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* ===== FAQ ===== */
+        .faq { padding: 100px 0; }
+        .faq-list { max-width: 740px; margin: 0 auto; }
+        .faq-item {
+            border-bottom: 1px solid var(--mint-dark);
+            padding: 0;
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 20px 0;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        .faq-question:hover { color: var(--green); }
+        .faq-icon {
+            font-size: 1.4rem;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            color: var(--green);
+        }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+        }
+        .faq-item.open .faq-answer { max-height: 600px; }
+        .faq-answer-inner {
+            padding: 0 0 20px;
+            color: var(--text-light);
+            font-size: 0.98rem;
+            line-height: 1.8;
+        }
+
+        /* ===== PRICING ===== */
+        .pricing { padding: 100px 0; background: var(--mint); }
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .pricing-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px 32px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        .pricing-card:hover { transform: translateY(-4px); }
+        .pricing-card.featured {
+            border: 2px solid var(--green);
+            position: relative;
+        }
+        .pricing-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--green);
+            margin-bottom: 8px;
+        }
+        .pricing-card h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--green-dark);
+        }
+        .pricing-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--green-dark);
+            margin: 16px 0 8px;
+        }
+        .pricing-amount span { font-size: 1rem; font-weight: 400; color: var(--text-light); }
+        .pricing-detail {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+        .pricing-note {
+            max-width: 600px;
+            margin: 32px auto 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ===== PRESS ===== */
+        .press { padding: 100px 0; }
+        .press-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 48px;
+        }
+        .press-logo {
+            height: 50px;
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s;
+        }
+        .press-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        .press-articles {
+            max-width: 700px;
+            margin: 48px auto 0;
+        }
+        .press-article {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--mint-dark);
+        }
+        .press-article a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--green-dark) 0%, #047857 100%);
+            color: var(--white);
+        }
+        .contact h2 { color: var(--white); }
+        .contact .section-subtitle { color: rgba(255,255,255,0.8); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-top: 48px;
+        }
+        .contact-info h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--beige);
+            margin-bottom: 16px;
+        }
+        .contact-info p {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        .contact-info a { color: var(--beige); }
+        .contact-info a:hover { color: var(--white); }
+        .contact-map {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            min-height: 280px;
+        }
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 280px;
+            border: 0;
+        }
+        .contact-social {
+            display: flex;
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .contact-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            color: var(--white);
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        .contact-social a:hover {
+            background: var(--white);
+            color: var(--green-dark);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--green-dark);
+            padding: 32px 0;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 12px;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-credit { margin-top: 4px; }
+        .footer-credit a { color: rgba(255,255,255,0.4); }
+
+        /* ===== LEGAL PAGES (Modal) ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .modal-overlay.open { display: flex; }
+        .modal {
+            background: var(--white);
+            border-radius: var(--radius);
+            max-width: 700px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 40px;
+            position: relative;
+        }
+        .modal h2 { font-size: 1.8rem; margin-bottom: 24px; }
+        .modal p, .modal li {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .modal h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            color: var(--green-dark);
+            margin: 20px 0 8px;
+        }
+        .modal-close {
+            position: sticky;
+            top: 0;
+            float: right;
+            background: var(--mint);
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--green-dark);
+            z-index: 10;
+        }
+        .modal-close:hover { background: var(--mint-dark); }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+            .intro-img { order: -1; max-width: 400px; margin: 0 auto; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .section { padding: 60px 0; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .press-logos { gap: 24px; }
+            .press-logo { height: 36px; }
+        }
+        @media (max-width: 480px) {
+            .hero-tagline { font-size: 2.5rem; }
+            .pricing-cards { grid-template-columns: 1fr; }
+        }
+
+        /* ===== PRINT ===== */
+        @media print {
+            header, .mobile-nav, .modal-overlay { display: none !important; }
+            .hero { min-height: auto; padding: 40px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+    <div class="nav-wrap">
+        <a href="#" class="nav-logo" aria-label="Startseite">
+            <img src="logo.png" alt="kuschel-therapie.at Logo" width="40" height="40">
+            <span>kuschel-therapie.at</span>
+        </a>
+        <nav class="nav-links" aria-label="Hauptnavigation">
+            <a href="#ueber-mich">Über mich</a>
+            <a href="#vorteile">Vorteile</a>
+            <a href="#faq">FAQ</a>
+            <a href="#preise">Preise</a>
+            <a href="#presse">Presse</a>
+            <a href="#kontakt" class="btn btn-primary btn-sm nav-cta">Kontakt</a>
+        </nav>
+        <button class="hamburger" id="menuBtn" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile Navigation">
+    <button class="mobile-close" id="mobileClose" aria-label="Menü schließen">&times;</button>
+    <a href="#ueber-mich" class="mobile-link">Über mich</a>
+    <a href="#vorteile" class="mobile-link">Vorteile</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#preise" class="mobile-link">Preise</a>
+    <a href="#presse" class="mobile-link">Presse</a>
+    <a href="#kontakt" class="mobile-link">Kontakt</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+    <div class="hero-bg">
+        <img src="hero-bg.webp" alt="" loading="eager" width="1200" height="800">
+    </div>
+    <div class="hero-content">
+        <p class="hero-name">Bianca Dorner</p>
+        <h1 class="hero-tagline">berührt glücklich</h1>
+        <p class="hero-desc">Erlebe, wie achtsame Berührung Körper und Geist entspannen kann. Lass dich in einem sicheren Raum fallen und tanke emotionale Wärme.</p>
+        <div class="hero-buttons">
+            <a href="#kontakt" class="btn btn-white">Kontaktiere Bianca</a>
+            <a href="#ueber-mich" class="btn btn-outline" style="border-color: rgba(255,255,255,0.5); color: #fff;">Erfahre mehr</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ÜBER MICH ===== -->
+<section class="intro section" id="ueber-mich">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-img fade-in">
+                <img src="bianca-profil.jpeg" alt="Bianca Dorner — Kuscheltherapeutin" width="683" height="1024" loading="lazy">
+            </div>
+            <div class="intro-text fade-in">
+                <h2>Über mich</h2>
+                <p><strong>Bianca Dorner</strong> — Diplomkrankenschwester, ausgebildete Kuscheltherapeutin, Kuschelparty-Anleiterin, von Pro Mente zertifizierte Ersthelferin für die Seele und ehrenamtliche Patin des Kinder- und Jugendprojektes „MaMMut – Mach Mir Mut!" der Kinder- und Jugendanwaltschaft des Landes OÖ.</p>
+                <p>Als Diplomkrankenschwester mit jahrelanger Erfahrung habe ich erlebt, wie wohltuend Aufmerksamkeit und einvernehmliche Berührungen sein können. Du sehnst dich nach warmen, absichtslosen Umarmungen? Du möchtest geknetet, gestreichelt, gehalten oder einfach nur gehört werden? Ich bin für dich da!</p>
+                <p>Wir können uns in meinem Kuschelrefugium in <strong>St. Florian bei Linz</strong>, bei dir oder an einem Ort deiner Wahl treffen.</p>
+                <p class="quote">„Wenn Achtsamkeit etwas Schönes berührt, enthüllt sie dessen Schönheit. Wenn sie etwas Schmerzhaftes berührt, wandelt sie es um und heilt es."</p>
+                <p style="color: var(--green); font-size: 0.9rem; margin-top: -8px;">— Thich Nhat Hanh</p>
+                <div style="margin-top: 24px;">
+                    <a href="#kontakt" class="btn btn-primary">Kontaktiere Bianca</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== VORTEILE ===== -->
+<section class="benefits section" id="vorteile">
+    <div class="container text-center">
+        <h2 class="fade-in">Warum Kuscheltherapie?</h2>
+        <p class="section-subtitle fade-in">Achtsame Berührungen und Umarmungen helfen dabei, Stress abzubauen und ein tiefes Gefühl von Verbundenheit zu erleben.</p>
+        <div class="benefits-grid">
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">🧠</div>
+                <h3>Oxytocin-Ausschüttung</h3>
+                <p>Das Glückshormon Oxytocin wird freigesetzt und sorgt für Wohlbefinden und Verbundenheit.</p>
+            </div>
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">💆</div>
+                <h3>Stressabbau</h3>
+                <p>Das Stresshormon Cortisol wird abgebaut, was zu tieferer Entspannung und innerer Ruhe führt.</p>
+            </div>
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">💪</div>
+                <h3>Stärkeres Immunsystem</h3>
+                <p>Regelmäßige achtsame Berührung stärkt das Immunsystem und senkt Blutdruck sowie Herzfrequenz.</p>
+            </div>
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">😴</div>
+                <h3>Besserer Schlaf</h3>
+                <p>Die Entspannung und das Gefühl von Sicherheit tragen zu einem erholsameren Schlaf bei.</p>
+            </div>
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">💛</div>
+                <h3>Mehr Selbstwertgefühl</h3>
+                <p>Positive Berührung stärkt das Selbstbewusstsein und schafft ein Gefühl der Geborgenheit.</p>
+            </div>
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">🤝</div>
+                <h3>Gegen Einsamkeit</h3>
+                <p>Vermindert soziale Isolation und fördert Empathie sowie emotionale Verbundenheit.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq section" id="faq">
+    <div class="container text-center">
+        <h2 class="fade-in">Fragen &amp; Antworten</h2>
+        <p class="section-subtitle fade-in">Alles, was du über die Kuscheltherapie wissen möchtest.</p>
+    </div>
+    <div class="container">
+        <div class="faq-list">
+            <div class="faq-item fade-in">
+                <button class="faq-question" aria-expanded="false">
+                    Was ist Kuscheltherapie?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Kuscheltherapie ist ein Wellness-Angebot und eine Form der Berührungstherapie, die durch körperliche Nähe ohne sexuelle Absicht Wohlbefinden und emotionale Geborgenheit fördert. Gerade in unserer zunehmend digitalen und hektischen Welt bietet die Kuscheltherapie eine wertvolle Möglichkeit, das Bedürfnis nach Nähe und menschlicher Wärme zu stillen.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" aria-expanded="false">
+                    Welche Regeln gibt es?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Kuscheln erfolgt immer bekleidet. Küssen, Berührungen im Intimbereich und sexuelle Handlungen sind nicht erlaubt. Das Greifen unter die Kleidung ist nicht gestattet. Außerhalb der Kuscheltherapie gibt es keinen privaten Kontakt. Diese Regeln schaffen eine sichere und geschützte Umgebung.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" aria-expanded="false">
+                    Wobei kann Kuscheltherapie helfen?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Kuscheltherapie kann bei vielen Themen unterstützend wirken: Überwindung von Berührungsängsten, Linderung von Angstzuständen und Depressionen, Reduzierung von Stress und Burnout-Symptomen, Bewältigung von Veränderungen und Lebenskrisen, Unterstützung in Trennungsphasen, Förderung des Selbstwertgefühls, Verbesserung des Schlafs sowie Verminderung von sozialer Isolation und Einsamkeit.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" aria-expanded="false">
+                    Wo findet die Kuscheltherapie statt?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Die Sessions finden im Kuschelrefugium in St. Florian bei Linz statt. Alternativ sind Hausbesuche im gesamten Raum Österreich möglich — bei Hausbesuchen fallen zusätzlich Fahrt- und ggf. Nächtigungskosten an. Wir können uns auch an einem Ort deiner Wahl treffen.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" aria-expanded="false">
+                    Kann ich Kuscheltherapie auch verschenken?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Ja! Es gibt Gutscheine, die du für einen lieben Menschen erwerben kannst. Kontaktiere Bianca einfach per E-Mail für weitere Informationen.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" aria-expanded="false">
+                    Wird Kuscheltherapie auch von Organisationen gebucht?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Ja, die Kuscheltherapie wird auch als Komplementärangebot zur Psychotherapie genutzt und von gemeinnützigen Vereinen wie Caritas, Lebenshilfe, Promente, Volkshilfe, Verein Senia, CARDO GmbH und dem Diakoniewerk gebucht.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PREISE ===== -->
+<section class="pricing section" id="preise">
+    <div class="container text-center">
+        <h2 class="fade-in">Preise</h2>
+        <p class="section-subtitle fade-in">Achtsame Berührung sollte für jeden zugänglich sein.</p>
+        <div class="pricing-cards">
+            <div class="pricing-card fade-in">
+                <div class="pricing-label">Einzelsession</div>
+                <h3>Standard</h3>
+                <div class="pricing-amount">€ <span>/ 60 Min.</span></div>
+                <p class="pricing-detail">Verlängerte Zeiteinheiten nach Absprache möglich.</p>
+                <a href="#kontakt" class="btn btn-primary">Termin buchen</a>
+            </div>
+            <div class="pricing-card featured fade-in">
+                <div class="pricing-label">Ermäßigt</div>
+                <h3>Für besondere Situationen</h3>
+                <div class="pricing-amount">€ <span>/ 60 Min.</span></div>
+                <p class="pricing-detail">Für StudentInnen, SchülerInnen, Arbeitssuchende, RentnerInnen, Alleinerziehende. Bitte Nachweis mitbringen.</p>
+                <a href="#kontakt" class="btn btn-primary">Termin buchen</a>
+            </div>
+        </div>
+        <p class="pricing-note fade-in">
+            Sollten die Preise gerade nicht passend für deinen Geldbeutel sein, sprich Bianca gerne an — es findet sich bestimmt eine Lösung. Jedem sollte ein Zugang zu achtsamer und nährender Berührung ermöglicht werden.<br><br>
+            <strong>Hausbesuche</strong> sind im gesamten Raum Österreich möglich. Bei Hausbesuchen fallen zusätzlich Fahrt- und ggf. Nächtigungskosten an.
+        </p>
+    </div>
+</section>
+
+<!-- ===== PRESSE ===== -->
+<section class="press section" id="presse">
+    <div class="container text-center">
+        <h2 class="fade-in">Bekannt aus</h2>
+        <p class="section-subtitle fade-in">Presseartikel und Medienbeiträge über Biancas Kuscheltherapie.</p>
+        <div class="press-logos fade-in">
+            <img src="Kronen-Zeitung-Logo-1024x959.png" alt="Kronen Zeitung" class="press-logo" loading="lazy">
+            <img src="heute-vector-logo-1.png" alt="Heute" class="press-logo" loading="lazy">
+            <img src="ooenachrichten_logo_810x420v2-1.png" alt="OÖ Nachrichten" class="press-logo" loading="lazy">
+            <img src="Logo-Mein-Bezirk.png" alt="Mein Bezirk" class="press-logo" loading="lazy">
+            <img src="Life-Radio-Logo_Schatten_png-300x285-1.png" alt="Life Radio" class="press-logo" loading="lazy">
+            <img src="oberoesterreicherin_logo_pink_1501.png" alt="Die Oberösterreicherin" class="press-logo" loading="lazy">
+            <img src="die-ganze-woche-logo-1.png" alt="Die Ganze Woche" class="press-logo" loading="lazy">
+            <img src="Volkshilfe-Magazin-fuer-Menschen-Logo.png" alt="Volkshilfe Magazin" class="press-logo" loading="lazy">
+        </div>
+        <div class="press-articles fade-in">
+            <div class="press-article">Kuscheltherapie: Pilotprojekt in Eferding gestartet</div>
+            <div class="press-article">Herzenswärme in St. Florian: Oberösterreichs erste Kuscheltherapeutin über die Kraft der Berührung</div>
+            <div class="press-article">„Manche schnurren": Kuscheln als Hilfe gegen Einsamkeit</div>
+        </div>
+        <p style="margin-top: 32px;" class="fade-in">
+            <strong>Presseanfragen</strong> werden jederzeit gerne entgegengenommen.<br>
+            <a href="mailto:nice2cyou@gmx.at" class="btn btn-outline" style="margin-top: 16px;">Kontakt für Presse</a>
+        </p>
+    </div>
+</section>
+
+<!-- ===== KONTAKT ===== -->
+<section class="contact section" id="kontakt">
+    <div class="container text-center">
+        <h2 class="fade-in">Kontakt</h2>
+        <p class="section-subtitle fade-in" style="color: rgba(255,255,255,0.8);">Still jetzt deinen Kuschelhunger — kontaktiere Bianca für einen Termin.</p>
+    </div>
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info fade-in">
+                <h3>Bianca Dorner</h3>
+                <p>Marienhofweg<br>St. Florian, Österreich</p>
+                <p style="margin-top: 16px;">
+                    <strong>E-Mail:</strong><br>
+                    <a href="mailto:nice2cyou@gmx.at">nice2cyou@gmx.at</a>
+                </p>
+                <div style="margin-top: 24px;">
+                    <a href="mailto:nice2cyou@gmx.at" class="btn btn-white">Mail an Bianca senden</a>
+                </div>
+                <div class="contact-social">
+                    <a href="https://www.linkedin.com/in/bianca-dorner-902b87212/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+                    <a href="https://www.facebook.com/profile.php?id=100086390531862" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+                    <a href="https://www.instagram.com/nice2_cyou/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+                </div>
+            </div>
+            <div class="contact-map fade-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2654.5!2d14.3778!3d48.2056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSt.+Florian!5e0!3m2!1sde!2sat!4v1" allowfullscreen loading="lazy" title="Standort St. Florian bei Linz"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="#" onclick="openModal('agb'); return false;">AGBs</a>
+            <a href="#" onclick="openModal('impressum'); return false;">Impressum</a>
+            <a href="#" onclick="openModal('datenschutz'); return false;">Datenschutz</a>
+        </div>
+        <p>&copy; 2026 kuschel-therapie.at — Bianca Dorner. Alle Rechte vorbehalten.</p>
+        <p class="footer-credit">Website: <a href="https://christiannouza.com" target="_blank" rel="noopener">Christian Nouza</a></p>
+    </div>
+</footer>
+
+<!-- ===== LEGAL MODALS ===== -->
+
+<!-- AGB Modal -->
+<div class="modal-overlay" id="modal-agb">
+    <div class="modal" role="dialog" aria-label="AGBs">
+        <button class="modal-close" onclick="closeModal('agb')" aria-label="Schließen">&times;</button>
+        <h2>Allgemeine Geschäftsbedingungen</h2>
+        <h4>Vertragsgegenstand</h4>
+        <p>Die Kuscheltherapie von Bianca Dorner bietet Einzelsitzungen für Berührungs- und Kuscheltherapie an. Ziel der Sessions ist es, ein Gefühl von Nähe, Geborgenheit und Vertrauen in einer geschützten und respektvollen Umgebung zu schaffen.</p>
+        <h4>Terminbuchung und Stornierung</h4>
+        <p>Termine sind vorab per E-Mail an nice2cyou@gmx.at zu buchen. Stornierungen sind bis zu 24 Stunden vor dem vereinbarten Termin kostenlos möglich. Bei späteren Stornierungen wird eine Ausfallgebühr von 50% des Session-Preises fällig. Bei Nichterscheinen ohne Absage wird der volle Betrag in Rechnung gestellt.</p>
+        <h4>Haftungsausschluss</h4>
+        <p>Die Kuscheltherapie ist ein Wellness-Angebot und ersetzt keine medizinische, psychologische oder psychiatrische Behandlung. Bianca Dorner übernimmt keine Haftung für körperliche oder psychische Reaktionen, die aus der Teilnahme an der Kuscheltherapie entstehen können.</p>
+        <h4>Zahlung</h4>
+        <p>Die Zahlung erfolgt vor Ort in bar oder per Überweisung im Voraus. Bei Bedarf ist eine Rechnungsstellung möglich.</p>
+        <h4>Kuschelregeln</h4>
+        <p>Die Kuscheltherapie ist strikt non-sexuell. Respektvolles und achtsames Verhalten ist Voraussetzung. Grenzen und Komfortzonen werden zu Beginn definiert und sind jederzeit zu respektieren. Jede Berührung erfolgt nur mit beidseitigem Einverständnis. Klienten und Therapeutin können jederzeit die Session pausieren oder beenden.</p>
+        <h4>Ergänzende Bestimmungen</h4>
+        <p>Der Klient erklärt, dass er körperlich und psychisch in der Lage ist, an einer Kuscheltherapie teilzunehmen. Teilnahme unter Alkohol- oder Drogeneinfluss ist untersagt. Ein einmal unterzeichneter Kuschelvertrag ist Voraussetzung für alle Sessions.</p>
+    </div>
+</div>
+
+<!-- Impressum Modal -->
+<div class="modal-overlay" id="modal-impressum">
+    <div class="modal" role="dialog" aria-label="Impressum">
+        <button class="modal-close" onclick="closeModal('impressum')" aria-label="Schließen">&times;</button>
+        <h2>Impressum</h2>
+        <p><strong>Kuscheltherapie Bianca Dorner</strong><br>Marienhofweg<br>St. Florian, Österreich</p>
+        <p><strong>E-Mail:</strong> nice2cyou@gmx.at<br><strong>Rechtsform:</strong> EPU Dorner</p>
+        <p><strong>Webseitenbetreiber:</strong> Christian Nouza — <a href="https://christiannouza.com" target="_blank" rel="noopener">christiannouza.com</a></p>
+        <h4>Haftungsausschluss für externe Links</h4>
+        <p>Diese Website enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+    </div>
+</div>
+
+<!-- Datenschutz Modal -->
+<div class="modal-overlay" id="modal-datenschutz">
+    <div class="modal" role="dialog" aria-label="Datenschutzerklärung">
+        <button class="modal-close" onclick="closeModal('datenschutz')" aria-label="Schließen">&times;</button>
+        <h2>Datenschutzerklärung</h2>
+        <h4>Verantwortlicher</h4>
+        <p>Bianca Dorner, Marienhofweg, St. Florian. E-Mail: nice2cyou@gmx.at</p>
+        <h4>Datenverarbeitung beim Besuch der Website</h4>
+        <p>Beim Aufrufen unserer Website werden automatisch Informationen an den Server gesendet: IP-Adresse, Datum und Uhrzeit, abgerufene Dateien, Referrer-URL, Browser und Betriebssystem. Diese Daten dienen der Gewährleistung eines reibungslosen Betriebs und werden nicht zur Personenidentifikation verwendet. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</p>
+        <h4>Kontaktformular</h4>
+        <p>Anfragen per Kontaktformular oder E-Mail werden zur Bearbeitung gespeichert und nicht ohne Einwilligung weitergegeben. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
+        <h4>Cookies</h4>
+        <p>Unsere Website verwendet Cookies zur nutzerfreundlichen Gestaltung. Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden.</p>
+        <h4>Ihre Rechte</h4>
+        <p>Sie haben gemäß DSGVO das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20), Widerruf der Einwilligung (Art. 7) und Beschwerde bei einer Aufsichtsbehörde (Art. 77).</p>
+        <h4>Datensicherheit</h4>
+        <p>Wir verwenden SSL-Verschlüsselung für sichere Datenübertragung.</p>
+    </div>
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileClose = document.getElementById('mobileClose');
+
+    menuBtn.addEventListener('click', () => {
+        mobileNav.classList.add('open');
+        menuBtn.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    function closeMobileMenu() {
+        mobileNav.classList.remove('open');
+        menuBtn.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    mobileClose.addEventListener('click', closeMobileMenu);
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.parentElement;
+            const isOpen = item.classList.contains('open');
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+            // Open clicked if it was closed
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    // Modals
+    function openModal(id) {
+        document.getElementById('modal-' + id).classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+        document.getElementById('modal-' + id).classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    // Close modal on overlay click
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+    // Close modal on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-overlay.open').forEach(m => {
+                m.classList.remove('open');
+            });
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Scroll animations (Intersection Observer)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Smooth scroll for anchor links (fallback)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                const headerHeight = header.offsetHeight;
+                const targetPos = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+                window.scrollTo({ top: targetPos, behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
